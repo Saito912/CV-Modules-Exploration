@@ -87,7 +87,7 @@ class LayerScale2D(nn.Module):
 class ConvNormAct(nn.Module):
 	
 	def __init__(self, dim_in, dim_out, kernel_size, stride=1, dilation=1, groups=1, bias=False,
-				 skip=False, norm_layer='bn_2d', act_layer='relu', inplace=True, drop_path_rate=0.):
+				 skip=False, norm_layer='bn_2d', act_layer='gelu', inplace=True, drop_path_rate=0.):
 		super(ConvNormAct, self).__init__()
 		self.has_skip = skip and dim_in == dim_out
 		padding = math.ceil((kernel_size - stride) / 2)
@@ -110,7 +110,7 @@ class ConvNormAct(nn.Module):
 class MSPatchEmb(nn.Module):
 	
 	def __init__(self, dim_in, emb_dim, kernel_size=2, c_group=-1, stride=1, dilations=[1, 2, 3],
-				 norm_layer='bn_2d', act_layer='silu'):
+				 norm_layer='gn', act_layer='silu'):
 		super().__init__()
 		self.dilation_num = len(dilations)
 		assert dim_in % c_group == 0

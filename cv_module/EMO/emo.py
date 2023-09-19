@@ -110,4 +110,7 @@ class iRMB(nn.Module):
 if __name__ == '__main__':
     import torch
     from cv_module.model_test import model_test
-    model_test(iRMB(256, 256), (torch.randn(1, 256, 32, 32),))
+    model = iRMB(256, 256)
+    model_test(model, (torch.randn(1, 256, 32, 32),))
+    out = model(torch.randn(1, 256, 32, 32))
+    print(out.shape)
