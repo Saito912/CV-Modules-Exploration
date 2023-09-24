@@ -245,7 +245,6 @@ class Sea_Attention(torch.nn.Module):
 
     def forward(self, x):  # x (B,N,C)
         B, C, H, W = x.shape
-
         q = self.to_q(x)
         k = self.to_k(x)
         v = self.to_v(x)
