@@ -26,6 +26,7 @@ class CoordAtt(nn.Module):
         x_w = self.pool_w(x).permute(0, 1, 3, 2)
 
         y = torch.concat([x_h, x_w], dim=2)
+
         y = self.conv1(y)
         y = self.bn1(y)
         y = self.act(y)

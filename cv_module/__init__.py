@@ -6,10 +6,13 @@ from .Ghost.ghost import Ghost, GhostConv
 from .SeaFormer.seaformer import Sea_Attention_Block
 from .FasterNet_PConv.pconv import Former_Partial_Conv, Partial_Conv
 from .CA.CoordAtt import CoordAtt
+from .ConvNext.convnext import ConvNeXtBlock
+from .transformer.transformer import TransformerEncoderLayer
+from .zeroDcePlus.predict import ZeroDceP
 
 __all__ = ['ASFF', 'BasicRFB', 'iRMB', 'FasterViTLayer',
            'Ghost', 'GhostConv', 'Sea_Attention_Block', 'Former_Partial_Conv',
-           'Partial_Conv', 'CoordAtt']
+           'Partial_Conv', 'CoordAtt', 'ConvNeXtBlock', 'TransformerEncoderLayer']
 
 """
 iRBM无效果,
