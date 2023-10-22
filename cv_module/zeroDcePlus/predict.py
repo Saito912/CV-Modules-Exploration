@@ -13,7 +13,7 @@ class ZeroDceP(nn.Module):
         current_path = os.path.dirname(__file__)
         ckpt_path = os.path.join(current_path, 'zero_dce_plus.pth')
         print('load ckpt from ' + ckpt_path)
-        self.model = enhance_net_nopool(8).to(device)
+        self.model = enhance_net_nopool(1).to(device)
         self.model.load_state_dict(torch.load(ckpt_path, map_location=device))
         self.model.eval()
         self.device = device
