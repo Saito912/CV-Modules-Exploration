@@ -11,6 +11,6 @@ def model_test(model: Module, input_data: Union[Tensor, Tuple[Tensor, ...]]):
     flops = FlopCountAnalysis(model, input_data)
 
     print(flop_count_table(flops))
-
+    print("此处计算的flops应该×2才是我们理解的FLOPs")
     out = model(*input_data)
     return out

@@ -10,10 +10,11 @@ from .CA.CoordAtt import CoordAtt
 # from .transformer.transformer import TransformerEncoderLayer
 from .zeroDcePlus.predict import ZeroDceP
 from .BiFPN.bi_fpn import BiFPN
+from .BiFormer import BiFormerBlock
 
 __all__ = ['ASFF', 'BasicRFB', 'FasterViTLayer',
            'Ghost', 'GhostConv', 'Sea_Attention_Block', 'Former_Partial_Conv',
-           'Partial_Conv', 'CoordAtt', 'BiFPN']
+           'Partial_Conv', 'CoordAtt', 'BiFPN', 'BiFormerBlock']
 
 """
 iRBM无效果,
