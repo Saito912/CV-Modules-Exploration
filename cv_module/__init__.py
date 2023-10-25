@@ -11,14 +11,15 @@ from .CA.CoordAtt import CoordAtt
 from .zeroDcePlus.predict import ZeroDceP
 from .BiFPN.bi_fpn import BiFPN
 from .BiFormer import BiFormerBlock
-
+from .SwiftFormer.swiftformer import SwiftFormerEncoder
 __all__ = ['ASFF', 'BasicRFB', 'FasterViTLayer',
            'Ghost', 'GhostConv', 'Sea_Attention_Block', 'Former_Partial_Conv',
-           'Partial_Conv', 'CoordAtt', 'BiFPN', 'BiFormerBlock']
+           'Partial_Conv', 'CoordAtt', 'BiFPN', 'BiFormerBlock', 'SwiftFormerEncoder']
 
 """
 iRBM无效果,
 GhostConv无用,
 Sea_Attention_Block有用,
 PConv+SeaForm Work,
+BiFormerBlock目前测试没用
 """
